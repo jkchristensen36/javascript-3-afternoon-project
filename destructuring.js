@@ -114,15 +114,16 @@ function largeNumbers({first, second, third}) {
 */
 
 //Code Here
-// function numberGroups({a, b, c}){
-//   let longestArr
-//   if(a.length >= b.length){
-//     longestArr = a
-//   } else{
-//     longestArr = b
-//   }
-//   if(c.length >= longestArr){
-//     longestArr = c
-//   }
-//   return longestArr
-// }
+function numberGroups({a, b, c}){
+  let longest
+  if(a.length < b.length){
+    longest = b 
+  } else{
+    longest = a
+  }
+  if(c.length > b.length){
+    longest = c
+  }
+  return longest
+}
+
